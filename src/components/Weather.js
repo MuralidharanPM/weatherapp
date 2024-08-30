@@ -53,6 +53,7 @@ export default function Weather() {
             const { lon, lat } = response.data;
             setLongitude(lon);
             setLatitude(lat);
+            console.log(longitude + " " + latitude); 
             fetchWeatherData(lat, lon);
             setZipCode('');
         } catch (error) {
@@ -92,7 +93,9 @@ export default function Weather() {
             setClimteImage(Tornado);
         } else if ((text).toString() === (("Clouds").toLocaleLowerCase()).toString()) {
             setClimteImage(Clouds);
-        } else if ((text).toString() === (("Overcast Clouds").toLocaleLowerCase()).toString()) {
+        } else if ((text).toString() === (("clear").toLocaleLowerCase()).toString()) {
+            setClimteImage(Clear);
+        } else if (((text).toString()).includes(("Rain").toLocaleLowerCase())) {
             setClimteImage(OverlayClouds);
         } else {
             setClimteImage(ThunderStorm);
