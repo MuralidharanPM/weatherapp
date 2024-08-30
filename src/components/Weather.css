@@ -184,7 +184,7 @@ body {
 }
 
 .climateResCls {
-    width: 75%;
+    width: 64%;
 }
 
 @media (max-width: 991px) {
@@ -215,7 +215,7 @@ body {
         flex-direction: column-reverse;
         gap: 20px;
     }
-    
+
     .humidityResSecCls,
     .temperatureResSecCls {
         font-size: 3.5vw;
