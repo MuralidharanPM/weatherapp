@@ -49,7 +49,7 @@ export default function Weather() {
 
     const latLongTrigger = async () => {
         try {
-            const response = await axios.get(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},IN&appid=${apiKey}`);
+            const response = await axios.get(`https://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},IN&appid=${apiKey}`);
             const { lon, lat } = response.data;
             setLongitude(lon);
             setLatitude(lat);
