@@ -21,7 +21,7 @@ import Snow from "../weatherAppAssets/setTwo/snow.png";
 import ThunderStorm from "../weatherAppAssets/setTwo/thunderstorm.png";
 import Tornado from "../weatherAppAssets/setTwo/tornado.png";
 
-const apiKey = 'd9a77540cfdedd8f282f4c83b2b5aace'; // Ensure this is defined and correct
+const apiKey = process.env.REACT_APP_API_KEY.replace(/['";]/g, '');
 
 export default function Weather() {
     const [zipCode, setZipCode] = useState('');
